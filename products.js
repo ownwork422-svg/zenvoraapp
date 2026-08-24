@@ -372,6 +372,8 @@ const products = [
     newArrival: false,
     bestSeller: false
   }
+];
+
 // Make globally available in all browser environments
 if (typeof window !== "undefined") {
   window.products = products;
