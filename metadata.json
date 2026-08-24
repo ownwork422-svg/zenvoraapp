@@ -1,0 +1,6 @@
+{
+  "name": "ZENVORA",
+  "description": "Premium Pakistani fashion and lifestyle e-commerce brand offering ladies suits, gents clothing, shoes, watches, and accessories.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

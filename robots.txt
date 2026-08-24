@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /stock.html
+Disallow: /cart.html
+Disallow: /checkout.html
+
+Sitemap: https://zenvorashoop.netlify.app/sitemap.xml
