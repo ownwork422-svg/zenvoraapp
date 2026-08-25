@@ -1376,15 +1376,28 @@ function initZenvoraApp() {
 
   function openMobileNav() {
     if (mobileNavDrawer) mobileNavDrawer.classList.add("active");
+    document.body.style.overflow = "hidden";
   }
 
   function closeMobileNav() {
     if (mobileNavDrawer) mobileNavDrawer.classList.remove("active");
+    document.body.style.overflow = "";
   }
 
   if (mobileMenuOpenBtn) mobileMenuOpenBtn.onclick = openMobileNav;
   if (mobileMenuCloseBtn) mobileMenuCloseBtn.onclick = closeMobileNav;
   if (mobileNavOverlay) mobileNavOverlay.onclick = closeMobileNav;
+
+  const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+  mobileNavLinks.forEach(link => {
+    link.addEventListener("click", closeMobileNav);
+  });
+
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape" && mobileNavDrawer && mobileNavDrawer.classList.contains("active")) {
+      closeMobileNav();
+    }
+  });
 
   // 4. If on Cart Page, render Cart
   if (document.getElementById("cartItemsList")) {
